@@ -1,0 +1,76 @@
+﻿@model User
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<form method="post" asp-action="DeletePOST">
+    <input asp-for="Id" hidden />
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Delete User</h2>
+            <hr />
+        </div>
+        <div asp-validation-summary="All"></div>
+        <div class="mb-3 col-md-3">
+            <label asp-for="FirstName"></label>
+            <input asp-for="FirstName" disabled class="form-control" />
+            
+        </div>
+        <div class="mb-3 col-md-3">
+            <label asp-for="LastName"></label>
+            <input asp-for="LastName" disabled class="form-control" />
+            
+        </div>
+        <div class="mb-3 col-md-3">
+            <label asp-for="StreetName"></label>
+            <input asp-for="StreetName" disabled class="form-control" />
+            
+        </div>
+        <div class="mb-3 col-md-2">
+            <label asp-for="HouseNumber"></label>
+            <input asp-for="HouseNumber" disabled class="form-control" />
+            
+        </div>
+        <div class="mb-3 col-md-2">
+            <label asp-for="ApartmentNumber"></label>
+            <input asp-for="ApartmentNumber" disabled class="form-control" />
+        </div>
+        <div class="mb-3 col-md-2">
+            <label asp-for="PostalCode"></label>
+            <input asp-for="PostalCode" disabled class="form-control" />
+            
+        </div>
+        <div class="mb-3 col-md-2">
+            <label asp-for="Town"></label>
+            <input asp-for="Town" disabled class="form-control" />
+           
+        </div>
+        <div class="mb-3 col-md-2">
+            <label asp-for="PhoneNumber"></label>
+            <input asp-for="PhoneNumber" disabled class="form-control" />
+            
+        </div>
+        <div class="mb-3 col-md-2">
+            <label asp-for="DateOfBirth"></label>
+            <input asp-for="DateOfBirth" disabled class="form-control" />
+            
+        </div>
+        <div class="mb-3 col-md-2">
+            <label asp-for="Age"></label>
+            <input asp-for="Age" disabled class="form-control" />
+            
+        </div>
+        <button type="submit" class="btn btn-danger" style="width:150px">Delete</button>
+        <a asp-controller="User" asp-action="Index" class="btn btn-secondary" style="width:150px">
+            Cancel
+        </a>
+    </div>
+</form>
+
+@section Scripts{
+
+    @{ 
+        <partial name="_ValidationScriptsPartial" />
+    }
+ }
+
